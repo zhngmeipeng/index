@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.8.0.min.js"></script>
+    <link href="../css/qianzao.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    .left-table-div{
+        /*border: 1px solid green;*/
+        width: 40%;
+        position: relative;
+        left: 30px;
+    }
+.theme-td{
+     width: 27%;
+ }
+.theme-tr{
+     height: 40px;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+}
+.blank-tr{
+    height: 10px;
+}
+ a{
+   text-decoration:none ;
+}
+    .border-th{
+        border: 1px solid grey
+    }
+</style>
+<body>
+    <div class="theme">
+        <div class="theme-text">浙江省前兆台网业务优化管理平台</div>
+        <div class="theme-text-pinyin">QIAN&nbsp;ZHAO&nbsp;TAI&nbsp;WANG&nbsp;YE&nbsp;WU&nbsp;GUAN&nbsp;LI&nbsp;PING&nbsp;TAI</div>
+        <div class="greet-text">admin&nbsp;欢迎您&nbsp;|&nbsp;设置&nbsp;|&nbsp;退出</div>
+    </div>
+    <!--值班、排班、任务管理-->
+    <div class="left-work-task">
+        <div class="introduce-table">值班、排班、任务管理</div>
+        <div class="before-fault-number" >有<div  class="fault-number">1</div><div class="after-fault-number">个未检查的工作任务</div></div>
+    </div>
+    <!--前兆台网系统日志-->
+    <div class="right-work-task">
+        <div class="introduce-table">前兆台网系统日志</div>
+        <div class="right-theme-text">今天发生<div class="right-fault-number">1</div><div class="right-after-fault-number">地震事件</div></div>
+    </div>
+<!--左半边的表格-->
+    <div class="left-table-div">
+        <table cellspacing="0" width="100%">
+            <tr class="theme-tr" style=" background-color: rgb(241,241,241);">
+                <td class="theme-td">任务名称</td>
+                <td class="theme-td">任务状态</td>
+                <td class="theme-td">检查时间</td>
+                <td class="o-td">操作</td>
+            </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+            <td class="border-th">国家局EQIM系统检查</td>
+            <td class="border-th">未检查</td>
+            <td class="border-th">无时间记录</td>
+            <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+        </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+                <td class="border-th">料续波形文件检查</td>
+                <td class="border-th">已检查</td>
+                <td class="border-th">2015-07-07 10:30:15</td>
+                <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+            </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+                <td class="border-th">料续波形文件检查</td>
+                <td class="border-th">已检查</td>
+                <td class="border-th">2015-07-07 10:30:15</td>
+                <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+            </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+                <td class="border-th">料续波形文件检查</td>
+                <td class="border-th">已检查</td>
+                <td class="border-th">2015-07-07 10:30:15</td>
+                <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+            </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+                <td class="border-th">料续波形文件检查</td>
+                <td class="border-th">已检查</td>
+                <td class="border-th">2015-07-07 10:30:15</td>
+                <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+            </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

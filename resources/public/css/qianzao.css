@@ -1,0 +1,153 @@
+.theme{
+    width: 99%;
+    background-color:rgb(116,165,241);
+    position: relative;
+    height: 100px;
+
+}
+.theme-text{
+    color:rgb(251,252,255);
+    font-size: 28px;
+    font-family:Microsoft JhengHei;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+.theme-text-pinyin{
+    color:rgb(251,252,255);
+    font-size: 18px;
+    font-family: Arial;
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+.greet-text{
+    color:rgb(251,252,255);
+    position: relative;
+    left: 1200px;
+    top: 15px;
+}
+.left-work-task{
+    background-color:rgb(116,165,241);
+    position: relative;
+    top: 20px;
+    height: 40px;
+    width: 45%;
+}
+.fault-number{
+    position: relative;
+    top: -20px;
+    left: 20px;
+    width: 20px;
+    /* border: 1px solid green;*/
+    color:rgb(251,252,255);
+    background: red;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.after-fault-number{
+    position: relative;
+    top: -40px;
+    left: 40px;
+    color:rgb(251,252,255);
+    font-size: 18px;
+}
+.before-fault-number{
+    width:200px;
+    /*border: 1px solid green;*/
+    height: 20px;
+    position: relative;
+    left: 60% ;
+    top: -10px;
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+}
+.introduce-table{
+    width: 200px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+}
+.right-work-task{
+    width: 52%;
+    background-color:rgb(116,165,241);
+    height: 40px;
+    position: relative;
+    left: 47%;
+    top: -20px;
+}
+.right-theme-text{
+    position: relative;
+    left: 70%;
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    top: -10px;
+}
+.right-fault-number{
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    background: red;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20px;
+    position: relative;
+    left: 10%;
+    top: -20px;
+}
+.right-after-fault-number{
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: -40px;
+    left: 13%;
+}
+.right-work-task{
+    width: 52%;
+    background-color:rgb(116,165,241);
+    height: 40px;
+    position: relative;
+    left: 47%;
+    top: -20px;
+}
+.right-theme-text{
+    position: relative;
+    left: 70%;
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    top: -10px;
+}
+.right-fault-number{
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    background: red;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20px;
+    position: relative;
+    left: 10%;
+    top: -20px;
+}
+.right-after-fault-number{
+    color:rgb(251,252,255);
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: -40px;
+    left: 13%;
+}
