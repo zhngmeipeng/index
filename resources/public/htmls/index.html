@@ -130,7 +130,7 @@ body{
         <div class="introduce-table"><img src="../img/dianmap.png" width="156" height="22"></div>
     </div>
     <!--地图-->
-    <div id="mapContainer" style="height: 350px; width: 1680px;margin-left: 40px;margin-top: 700px"></div>
+    <div id="mapContainer" style="height: 350px; width: 1680px;margin-left: 40px;margin-top:690px"></div>
    <!-- 前兆台网台站信息管理-->
     <div class="left-qianzhao-task">
         <div class="introduce-table"><img src="../img/qianzhaoxinxiguli.png" width="267" height="22"></div>
@@ -143,10 +143,10 @@ body{
    <!-- 国家台网反馈日报五个小方块-->
     <div class="five-square">
         <div class="square" style="position: absolute;background-color: rgb(241,241,241);">国家台网反馈日报</div>
-        <div class="square" style="position: absolute;left: 150px;">台站信息管理</div>
-        <div class="square" style="position: absolute;left: 300px">台站巡检信息</div>
-        <div class="square" style="position: absolute;left: 450px">台网仪器标定信息</div>
-        <div class="square" style="position: absolute;left: 600px">台网仪器维护信息</div>
+        <div class="square1" style="position: absolute;left: 150px;">台站信息管理</div>
+        <div class="square1" style="position: absolute;left: 300px">台站巡检信息</div>
+        <div class="square1" style="position: absolute;left: 450px">台网仪器标定信息</div>
+        <div class="square1" style="position: absolute;left: 600px">台网仪器维护信息</div>
     </div>
     <!--反馈时间-->
     <div class="time-feedback">
@@ -158,7 +158,7 @@ body{
     <!--增删改查-->
     <div class="add-delete-div">
         <div class="after-add-div">
-            <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="&新&nbsp;增"/>
+            <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="新&nbsp;增"/>
             <input type="button" class="button-style" style="background-color: rgb(150,205,61);" value="编&nbsp;辑"/>
             <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
         </div>
@@ -179,6 +179,45 @@ body{
                     <td class="table-td-chinese" style="color: rgb(245,126,113)">服务器&nbsp;D</td>
                 </tr>
             </table>
+    </div>
+    <!--右边ip搜索-->
+    <div class="server-search">
+        <div class="server-input-div">服务器名称&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
+        <div class="ip-input-div">IP&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
+        <div class="after-search-div">
+            <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="搜&nbsp;索"/>
+        </div>
+    </div>
+    <!--服务器增删改查-->
+    <div class="add-server-div">
+            <div class="yellow-div">服务器报警参数设置</div>
+            <div class="after-yellow-div">
+                服务器&nbsp;：<input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="新&nbsp;增"/>
+                <input type="button" class="button-style" style="background-color: rgb(150,205,61);" value="编&nbsp;辑"/>
+                <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
+            </div>
+    </div>
+    <!--关于服务器表格-->
+    <div class="server-table-div">
+        <table cellspacing="0" border="1">
+            <tr>
+                <td rowspan="2"><input type="checkbox"/></td>
+                <td>服务器名称</td>
+                <td>*******************</td>
+                <td>代码</td>
+                <td>************</td>
+                <td>IP</td>
+                <td>************</td>
+                <td>位置</td>
+                <td>************</td>
+                <td>网络</td>
+                <td>连接正常</td>
+            </tr>
+            <tr>
+                <td>服务器状态</td>
+                <td colspan="9">cpu&nbsp;用：***(90%)剩：***(10%)内存&nbsp;用：***(50%)磁盘&nbsp;用：***(50%)剩：***(50%)温度&nbsp;23</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

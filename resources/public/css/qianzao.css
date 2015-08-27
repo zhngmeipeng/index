@@ -60,12 +60,11 @@
     width: 30px;
     height: 30px;
     line-height:30px;
-    color:rgb(251,252,255);
-    background: red;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    background: url("../img/red-circle.png");
     text-align: center;
+    color: white;
+    font-family: "Microsoft JhengHei";
+    font-size: 20px;
 }
 /*���������ֵ�������*/
 
@@ -223,28 +222,34 @@ select{
     top: 90px;
 }
 .square{
-    border: 1px solid grey;
-    width: 120px;
-    height: 50px;
+     width: 130px;
+     height: 40px;
+     font-family: "Microsoft JhengHei";
+     font-size: 15px;
+     line-height: 40px;
+     text-align: center;
+     font-weight: 300;
+     background: url("../img/day-report.png");
+ }
+.square1{
+    width: 130px;
+    height: 40px;
     font-family: "Microsoft JhengHei";
     font-size: 15px;
-    line-height: 45px;
+    line-height: 40px;
     text-align: center;
     font-weight: 300;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    background: url("../img/white-square.png");
 }
 /*以上是国家台网反馈日报五个小方块*/
 
 .time-feedback{
-    border: 1px solid grey;
-    width: 720px;
+    width: 730px;
     height: 50px;
     position: relative;
     left:50px ;
     top: 100px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    background: url("../img/feed-time.png");
 }
 .time-feedback-calender{
     position: absolute;
@@ -280,14 +285,12 @@ select{
 }
 /*以上是反馈时间*/
 .add-delete-div{
-    border: 1px solid grey;
-    width: 720px;
+    width: 735px;
     height: 40px;
     position: relative;
     left: 50px;
-    top: 120px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    top: 110px;
+    background: url("../img/addanddelete.png");
 }
 .after-add-div{
     width:35%;
@@ -297,9 +300,8 @@ select{
 }
 /*以上是增删改查*/
 .server-div{
-    border: 1px solid green;
     width: 800px;
-    height: 250px;
+    height: 200px;
     position: relative;
     left: 47%;
     top: -40px;
@@ -311,8 +313,69 @@ select{
 .table-td-chinese{
     height:50px;
    padding-left: 75px;
-    font-size:18px;
+    font-size:25px;
     font-family: "Microsoft JhengHei";
     font-weight: 300;
-    padding-top:15px;
+    padding-top:20px;
+}
+/*以上是服务器*/
+
+.server-search{
+    width: 895px;
+    height: 51px;
+    background: url("../img/control.png");
+    position: relative;
+    left: 43%;
+    top: -30px;
+}
+.server-input-div{
+   /* border: 1px solid green;*/
+    font-size:20px;
+    padding-top: 9px;
+    padding-left: 3%;
+    width: 50%;
+}
+.ip-input-div{
+    position: absolute;
+    left:50%;
+    top: 8px;
+}
+.after-search-div{
+position: absolute;
+    left: 90%;
+    top: 8px;
+}
+/*以上是服务器和ip搜索*/
+.add-server-div{
+    width: 895px;
+    height: 51px;
+    background: url("../img/control.png");
+    position: relative;
+    left:43%;
+    top: -20px;
+}
+.yellow-div{
+    width: 259px;
+    height: 30px;
+    background: url("../img/yellow.png");
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    font-size: 20px;
+    font-family: "Microsoft JhengHei";
+    color: white;
+    text-align: center;
+}
+.after-yellow-div{
+    width:40%;
+    position: absolute;
+    left: 38%;
+    top: 8px;
+}
+.server-table-div{
+    border: 1px solid green;
+    width: 895px;
+    height: 300px;
+    position: relative;
+    left: 43%;
 }
