@@ -36,12 +36,12 @@ body{
     <!--值班、排班、任务管理-->
     <div class="left-work-task">
         <div class="introduce-table"><img src="../img/zhiban.png" width="267" height="22"></div>
-        <div class="before-fault-number"><img src="../img/onefault.png"><div  class="fault-number">1</div></div>
+        <div class="before-fault-number"><img src="../img/onefault.png"><div  class="fault-number" style="position: absolute;top: 5px;left: 25px;">1</div></div>
     </div>
 <!--前兆台网系统日志-->
     <div class="right-work-task">
         <div class="introduce-table"><img src="../img/rizhi.png" width="212" height="22"></div>
-        <div class="right-theme-text"><img src="../img/dizheng.png" width="241" height="22"><div class="right-fault-number">1</div></div>
+        <div class="right-theme-text"><img src="../img/dizheng.png" width="241" height="22"><div class="fault-number" style="position: absolute;left: 44%;top: -5px;">1</div></div>
     </div>
 <!--<左半边的表格-->
     <div class="left-table-div">
@@ -138,9 +138,47 @@ body{
     <!-- 前兆台网服务器监控管理-->
     <div class="right-qianzhao-task">
         <div class="introduce-table"><img src="../img/fuwujiankong.png" width="294" height="22"></div>
+        <div class="right-theme-text"><img src="../img/oneserverdefault.png" width="213" height="22"><div class="fault-number" style="position: absolute;left: 10%;top: -5px;">1</div></div>
     </div>
+   <!-- 国家台网反馈日报五个小方块-->
     <div class="five-square">
-        <div class="square1"></div>
+        <div class="square" style="position: absolute;background-color: rgb(241,241,241);">国家台网反馈日报</div>
+        <div class="square" style="position: absolute;left: 150px;">台站信息管理</div>
+        <div class="square" style="position: absolute;left: 300px">台站巡检信息</div>
+        <div class="square" style="position: absolute;left: 450px">台网仪器标定信息</div>
+        <div class="square" style="position: absolute;left: 600px">台网仪器维护信息</div>
+    </div>
+    <!--反馈时间-->
+    <div class="time-feedback">
+        <div class="time-feedback-calender">反馈时间&nbsp;<input  type="text" id="input3" class="input-size1"/> -&nbsp;<input  type="text" id="input4" class="input-size1"/></div>
+        <div class="rili3" onclick="WdatePicker({el:'input3'})">日历</div>
+        <div class="rili4" onclick="WdatePicker({el:'input4'})">日历</div>
+        <input type="button" class="button-style" style="background-color: rgb(89,126,207);margin-left:84%;margin-top: 10px" value="搜&nbsp;索"/>
+    </div>
+    <!--增删改查-->
+    <div class="add-delete-div">
+        <div class="after-add-div">
+            <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="&新&nbsp;增"/>
+            <input type="button" class="button-style" style="background-color: rgb(150,205,61);" value="编&nbsp;辑"/>
+            <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
+        </div>
+    </div>
+    <!--服务器图片-->
+    <div class="server-div">
+            <table cellspacing="0" >
+                <tr>
+                    <td class="table-td-width"><img src="../img/right-server.png"></td>
+                    <td class="table-td-width"><img src="../img/right-server.png"></td>
+                    <td class="table-td-width"><img src="../img/right-server.png"></td>
+                    <td class="table-td-width"><img src="../img/fault-server.png"></td>
+                </tr>
+                <tr>
+                    <td class="table-td-chinese">服务器&nbsp;A</td>
+                    <td class="table-td-chinese">服务器&nbsp;B</td>
+                    <td class="table-td-chinese">服务器&nbsp;C</td>
+                    <td class="table-td-chinese" style="color: rgb(245,126,113)">服务器&nbsp;D</td>
+                </tr>
+            </table>
     </div>
 </body>
 </html>

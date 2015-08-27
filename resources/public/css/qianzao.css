@@ -57,9 +57,6 @@
     left: 55%;
 }
 .fault-number{
-    position: absolute;
-    top: 5px;
-    left: 25px;
     width: 30px;
     height: 30px;
     line-height:30px;
@@ -86,22 +83,6 @@
     height: 22px;
     left: 70%;
     top: 10px;
-}
-.right-fault-number{
-    color:rgb(251,252,255);
-    /*font-weight: bold;*/
-    font-size: 18px;
-    background: red;
-    -moz-border-radius:30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
-    text-align: center;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 44%;
-    top: -5px;
 }
 /*������ǰ��̨��ϵͳ��־*/
 
@@ -162,7 +143,6 @@ a{
     height: 25px;width: 140px;
 }
 .after-rili-div{
-
     width:25%;
     position: absolute;
     left: 28%;
@@ -231,18 +211,108 @@ select{
     height: 40px;
     position: relative;
     left: 810px;
-    top:81px;
+    top:80px;
 }
+/*以上前兆台网服务器监控管理*/
 .five-square{
-    border: 1px solid green;
+/*    border: 1px solid green;*/
     width: 720px;
-    height: 60px;
+    height: 55px;
     position: relative;
     left: 50px;
     top: 90px;
 }
 .square{
-    border: 1px solid green;
-    width: 100px;
+    border: 1px solid grey;
+    width: 120px;
     height: 50px;
+    font-family: "Microsoft JhengHei";
+    font-size: 15px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 300;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+/*以上是国家台网反馈日报五个小方块*/
+
+.time-feedback{
+    border: 1px solid grey;
+    width: 720px;
+    height: 50px;
+    position: relative;
+    left:50px ;
+    top: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.time-feedback-calender{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    line-height:16px ;
+    font-size: 15px;
+}
+.input-size1{
+    height: 25px;width: 210px;
+}
+.rili3{
+    border:1px solid  grey;
+    width: 40px;
+    height:28px;
+    position: absolute;
+    top:10px;
+    left: 37%;
+    line-height: 26px;
+    background: rgb(199,199,200);
+    text-align: center;
+}
+.rili4{
+    border:1px solid  grey;
+    width: 40px;
+    height:28px;
+    position: absolute;
+    top:10px;
+    left: 71%;
+    line-height: 26px;
+    background: rgb(199,199,200);
+    text-align: center;
+}
+/*以上是反馈时间*/
+.add-delete-div{
+    border: 1px solid grey;
+    width: 720px;
+    height: 40px;
+    position: relative;
+    left: 50px;
+    top: 120px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.after-add-div{
+    width:35%;
+    position: absolute;
+    left: 62%;
+    top: 3px;
+}
+/*以上是增删改查*/
+.server-div{
+    border: 1px solid green;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    left: 47%;
+    top: -40px;
+}
+.table-td-width{
+    width: 200px;
+    padding-left: 30px;
+}
+.table-td-chinese{
+    height:50px;
+   padding-left: 75px;
+    font-size:18px;
+    font-family: "Microsoft JhengHei";
+    font-weight: 300;
+    padding-top:15px;
 }
