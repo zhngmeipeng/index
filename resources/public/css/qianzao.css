@@ -372,10 +372,45 @@ position: absolute;
     left: 38%;
     top: 8px;
 }
+/*以上是服务器增删改查*/
 .server-table-div{
-    border: 1px solid green;
     width: 895px;
-    height: 300px;
+    height: 320px;
     position: relative;
     left: 43%;
+}
+.first-td{
+   width:3%;
+    border: 1px solid grey;
+}
+.second-td{
+    width: 12%;
+    text-align:
+    center;height: 30px;
+    background-color: rgb(204,204,204);
+    border: 1px solid grey;
+}
+.third-td{
+    width: 18%;
+    text-align: center;
+    border: 1px solid grey;
+}
+.forth-td{
+    width: 6%;
+    text-align: center;
+    background-color: rgb(204,204,204);
+    border: 1px solid grey;
+}
+.five-td{
+   width: 10%;
+    text-align: center;
+    border: 1px solid grey;
+}
+.six-td{
+    width: 11%;
+    text-align: center;
+    border: 1px solid grey;
+}
+.last-td{
+    border: 1px solid grey;
 }
