@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <title></title>
     <script src="../js/jquery-1.8.0.min.js"></script>
     <link href="../css/qianzao.css" rel="stylesheet" type="text/css" />
     <script src="../My97DatePicker/WdatePicker.js"></script>
+    <script src="../js/rightTable.js"></script>
+
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css" />
+    <script src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值">
+
+    </script>
 </head>
 <style>
-
+body{
+/*    height: 10%;
+    position: relative;
+    left: 40px;
+    top: 500px;*/
+}
 
 </style>
+<script>
+    showTable();
+</script>
 <body>
     <div class="theme">
         <div class="greet-text">admin&nbsp;欢迎您&nbsp;|&nbsp;设置&nbsp;|&nbsp;退出</div>
@@ -29,7 +45,7 @@
     </div>
 <!--<左半边的表格-->
     <div class="left-table-div">
-        <table cellspacing="0" width="700px"  border="1">
+        <table cellspacing="0" width="700px">
             <tr class="theme-tr" style=" background-color: rgb(241,241,241);">
                 <td class="theme-td">任务名称</td>
                 <td class="theme-td">任务状态</td>
@@ -45,6 +61,15 @@
             <td class="border-th">无时间记录</td>
             <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
         </tr>
+            <tr class="blank-tr">
+                <td colspan="4"></td>
+            </tr>
+            <tr class="theme-tr">
+                <td class="border-th">料续波形文件检查</td>
+                <td class="border-th">已检查</td>
+                <td class="border-th">2015-07-07 10:30:15</td>
+                <td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td>
+            </tr>
             <tr class="blank-tr">
                 <td colspan="4"></td>
             </tr>
@@ -100,13 +125,31 @@
         </div>
     </div>
     <!--右边的表格-->
-   <!-- <div>
-        <tr>
-            <td>选择</td>
-            <td>事件内容</td>
-            <td>事件类型</td>
-            <td>时间/td>
-        </tr>
-    </div>-->
+    <div class="right-work-table" id="divmessage"></div>
+    <div class="map-div">
+        <div class="introduce-table"><img src="../img/dianmap.png" width="156" height="22"></div>
+    </div>
+    <!--地图-->
+    <div id="mapContainer" style="height: 350px; width: 1680px;margin-left: 40px;margin-top: 700px"></div>
+   <!-- 前兆台网台站信息管理-->
+    <div class="left-qianzhao-task">
+        <div class="introduce-table"><img src="../img/qianzhaoxinxiguli.png" width="267" height="22"></div>
+    </div>
+    <!-- 前兆台网服务器监控管理-->
+    <div class="right-qianzhao-task">
+        <div class="introduce-table"><img src="../img/fuwujiankong.png" width="294" height="22"></div>
+    </div>
+    <div class="five-square">
+        <div class="square1"></div>
+    </div>
 </body>
 </html>
+<script>
+    var map = new AMap.Map('mapContainer', {
+        // 设置中心点
+        center: [116.397428, 39.90923],
+
+        // 设置缩放级别
+        zoom: 12
+    });
+</script>
