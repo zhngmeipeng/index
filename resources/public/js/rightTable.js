@@ -13,10 +13,11 @@ window.onload=function(){
         function(data) {
 
             $.each(data, function(k, v) {
-                tt+='<tr style="text-align: center" class="theme-tr3"><td class="show-border"><input type="checkbox"></td>';
-                $.each(v,function(kk, vv) {
+                tt+='<tr style="text-align: center" class="theme-tr3"><td class="show-border"><input type="checkbox"></td>' +
+                    '<td class="show-border">'+ v.productid+'</td><td class="show-border">'+ v.productname+'</td><td class="show-border">'+ v.unitcost+'</td>';
+/*                $.each(v,function(kk, vv) {
                     tt+="<td class='show-border'>"+vv+"</td>";
-                });
+                });*/
                 tt+='</tr>'
             });
             var ss=table+tt+"</table>"
@@ -61,9 +62,21 @@ window.onload=function(){
 
             });
             var status=statable+statt+'</table>';
-            console.log(status)
             $("#machineTable").html(status);
         });
 };
 
+    var mtable=' <table cellspacing="0" width="730px"><tr><td style="width: 10%;" class="machine-first-row">选择</td><td  style="width: 30%;" class="machine-first-row">反馈时间</td>' +
+        ' <td  style="width: 60%;" class="machine-first-row">反馈内容</td> </tr><tr><td colspan="3" class="feedback-last-td"></td></tr>';
+    var mtt = '';
+
+    $.getJSON(
+        "../json/ee.json",
+        function(data) {
+            $.each(data, function (k, v) {
+                mtt +='<tr><td  class="text-position"><input type="checkbox"></td><td  class="text-position">'+ v.fbtime+'</td> <td  class="text-position">v.content</td><tr><td colspan="3" class="feedback-last-td"></td></tr>';
+            });
+            var mss = mtable + mtt + '</table>';
+            $("#feedbackTable").html(mss);
+        });
 }

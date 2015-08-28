@@ -118,6 +118,28 @@
     </div>
     <!--右边的表格-->
     <div class="right-work-table" id="divmessage"></div>
+    <div class="page-right-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
+    <!--地图标题-->
     <div class="map-div">
         <div class="introduce-table"><img src="../img/dianmap.png" width="156" height="22"></div>
     </div>
@@ -191,6 +213,27 @@
     </div>
     <!--关于服务器表格-->
     <div class="server-table-div" id="serverTable"></div>
+    <div class="page-server-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
 <!--前兆台网仪器设备监控管理-->
     <div class="right-yiqi-task">
         <div class="yiqi-div"><img src="../img/yiqicontrol.png" width="294" height="22"></div>
@@ -215,20 +258,50 @@
     </div>
     <!--设备仪器表格-->
     <div class="yiqi-div-table" id="machineTable"></div>
+    <div class="page-yiqi-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="submit" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="submit" value="上一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num-1}')">
+            <input type="submit" value="下一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num+1}')">
+            <input type="submit" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
     <!--左边的反馈表格-->
-<div class="feedback-table-div">
-    <table cellspacing="0" border="1">
-        <tr>
-            <td style="width: 10%">选择</td>
-            <td  style="width: 10%">反馈时间</td>
-            <td  style="width: 10%">反馈内容</td>
-        </tr>
-        <tr>
-        <td colspan="3"></td>
-    </tr>
-
-    </table>
-</div>
+<div class="feedback-table-div" id="feedbackTable"></div>
+    <div class="page-feedback-work">
+        <div class="page-right-feedback">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
 </body>
 </html>
 <script>

@@ -190,7 +190,7 @@ select{
 .map-div{
     background-color:rgb(116,165,241);
     position: relative;
-    top: -270px;
+    top: -330px;
     left: 40px;
     height: 40px;
     width: 1680px;
@@ -385,8 +385,8 @@ position: absolute;
 }
 .second-td{
     width: 12%;
-    text-align:
-    center;height: 30px;
+    text-align: center;
+    height: 30px;
     background-color: rgb(204,204,204);
     border: 1px solid grey;
 }
@@ -421,7 +421,7 @@ position: absolute;
     height: 40px;
     position: relative;
     left: 810px;
-    top:100px;
+/*    top:50px;*/
 }
 .yiqi-div{
     width: 321px;
@@ -437,7 +437,7 @@ position: absolute;
     background: url("../img/control.png");
     position: relative;
     left: 43%;
-    top: 110px;
+    top: 10px;
 }
 .station-input-div{
     font-size:15px;
@@ -456,7 +456,7 @@ position: absolute;
     background: url("../img/control.png");
     position: relative;
     left: 43%;
-    top: 120px;
+    top: 20px;
 }
 .after-yiqi-div{
     width:40%;
@@ -471,12 +471,12 @@ position: absolute;
     height: 400px;
     position: relative;
     left: 43%;
-    top: 140px;
+    top: 40px;
 }
 .machine-first{
     width: 11%;
     background: rgb(204,204,204);
-    height: 30px;
+    height: 33px;
     text-align: center;
     border: 1px solid grey;
 }
@@ -495,11 +495,95 @@ position: absolute;
 }
 /*以上是右边的仪器表格*/
 .feedback-table-div{
-    border: 1px solid green;
+/*    border: 1px solid green;*/
     position: relative;
     left: 50px;
     width:730px;
-    height: 1100px;
-    top: -1040px;
+    height: 1200px;
+    top: -1170px;
+}
+.machine-first-row{
+    background-color:rgb(204,204,204);
+    height: 30px;
+    text-align: center;
+    border: 1px solid grey;
+}
+.feedback-last-td{
+    height:10px;
+    border-top: 1px solid grey;
+}
+.text-position{
+    text-align:center ;
+    height: 30px;
+    border: 1px solid grey;
+}
+/*以上是左边的反馈表格*/
+.page-right-work{
+    border: 1px solid grey;
+    width: 873px;
+    height: 60px;
+    position: relative;
+    top: -360px;
+    left: 43.5%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color:rgb(241,241,241) ;
+}
+.page-right-switch{
+/*    border: 1px solid green;*/
+    height: 40px;
+    width:700px;
+    position: absolute;
+    top: 15px;
+    left:10%;
+    font-size: 13px;
+}
+.page-button{
+    background-color: rgb(201,226,250);
+    box-shadow: 0px 0px 7px rgba(255, 255,255, 0.5);
+    color: rgb(50,96,133);
+    font-weight: bold
+}
+/*以上是日志下面表格的分页*/
+.page-server-work{
+    border: 1px solid grey;
+    width: 873px;
+    height: 60px;
+    position: relative;
+    top: -20px;
+    left: 43.5%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color:rgb(241,241,241) ;
+}
+.page-yiqi-work{
+    border: 1px solid grey;
+    width: 873px;
+    height: 60px;
+    position: relative;
+      top: 40px;
+    left: 43.5%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color:rgb(241,241,241) ;
+}
+.page-feedback-work{
+    border: 1px solid grey;
+    width: 700px;
+    height: 60px;
+    position: relative;
+    top: -1223px;
+    left:50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color:rgb(241,241,241) ;
+}
+.page-right-feedback{
+    height: 40px;
+    width:700px;
+    position: absolute;
+    top: 15px;
+    left: 2%;
+    font-size: 13px;
 }
 
