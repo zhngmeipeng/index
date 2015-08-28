@@ -51,12 +51,12 @@ window.onload=function(){
             $.each(data, function(k, v) {
                 statt+='<tr><td rowspan="4" class="first-machine-td"><input type="checkbox"/></td><td class="machine-first">台站名称</td>' +
                     '<td class="machine-second">'+ v.staname+'</td><td class="machine-first">台站代码</td><td class="machine-second">'+ v.stacode+'</td>' +
-                    '<td class="machine-first">测点编码</td><td class="machine-second">'+ v.testcod+'</td></tr>' +
+                    '<td class="machine-first">测点编码</td><td class="machine-second">'+ v.testcode+'</td></tr>' +
                     '<tr><td class="machine-first">仪器名称</td>' +
                     '<td class="machine-second">'+ v.mname+'</td> <td class="machine-first">仪器编号</td><td class="machine-second">'+ v.mcode+'</td>' +
                     '<td class="machine-first">所属学科</td><td class="machine-second">'+ v.ssub+'</td></tr>' +
                     '<tr><td class="machine-first">所在位置</td><td class="machine-second">v.pos</td><td class="machine-first">管理员</td>' +
-                    '<td class="machine-second">'+ v.admin+'</td><td class="machine-first">联系电话</td><td class="machine-second">v.tel</td></tr>' +
+                    '<td class="machine-second">'+ v.admin+'</td><td class="machine-first">联系电话</td><td class="machine-second">'+v.tel+'</td></tr>' +
                     '<tr><td class="machine-first">仪器状态</td><td colspan="5" class="border-th">'+ v.mstatus+'</td></tr>' +
                     '<tr><tr class="machine-last-tr"><td colspan="7" class="machine-last-td"></td> </tr>'
 
@@ -74,9 +74,25 @@ window.onload=function(){
         "../json/ee.json",
         function(data) {
             $.each(data, function (k, v) {
-                mtt +='<tr><td  class="text-position"><input type="checkbox"></td><td  class="text-position">'+ v.fbtime+'</td> <td  class="text-position">v.content</td><tr><td colspan="3" class="feedback-last-td"></td></tr>';
+                mtt +='<tr><td  class="text-position"><input type="checkbox"></td><td  class="text-position">'+ v.fbtime+'</td> <td  class="text-position">'+v.content+'</td><tr><td colspan="3" class="feedback-last-td"></td></tr>';
             });
             var mss = mtable + mtt + '</table>';
             $("#feedbackTable").html(mss);
+        });
+
+    var rtable=' <table cellspacing="0" width="700px"><tr class="theme-tr" style=" background-color: rgb(241,241,241);">' +
+        ' <td class="theme-td">任务名称</td> <td class="theme-td">任务状态</td><td class="theme-td">检查时间</td><td class="o-td">操作</td></tr> <tr class="blank-tr">' +
+        '<td colspan="4"></td></tr>'
+    var rtt = '';
+
+    $.getJSON(
+        "../json/ff.json",
+        function(data) {
+            $.each(data, function (k, v) {
+                rtt +='<tr class="theme-tr"><td class="border-th">'+ v.name+'</td><td class="border-th">'+ v.status+'</td><td class="border-th">'+ v.time+'</td>' +
+                    '<td class="border-th"><a href="###">刷新</a>&nbsp;<a href="###">设置</a></td></tr> <tr class="blank-tr"><td colspan="4"></td></tr>';
+            });
+            var rss = rtable + rtt + '</table>';
+            $("#reportId").html(rss);
         });
 }

@@ -112,11 +112,13 @@ a{
 }
 /*����������������Ʊ��*/
 .right-input{
+/*    border: 1px solid green;*/
     position: relative;
     left: 830px;
     top: -420px;
     font-size: 15px;
     font-family: "Microsoft JhengHei";
+    width: 870px;
 }
 .rili{
     border:1px solid  grey;
@@ -124,7 +126,7 @@ a{
     height:28px;
     position: absolute;
     top:1px;
-    left: 17.5%;
+    left: 38%;
     line-height: 26px;
     background: rgb(199,199,200);
 }
@@ -134,7 +136,7 @@ a{
     height:28px;
     position: absolute;
     top:2%;
-    left: 25.9%;
+    left: 56%;
     line-height: 26px;
     background: rgb(199,199,200);
 }
@@ -142,9 +144,9 @@ a{
     height: 25px;width: 140px;
 }
 .after-rili-div{
-    width:25%;
+    width:60%;
     position: absolute;
-    left: 28%;
+    left: 62%;
     top: -1px;
 }
 select{
@@ -199,7 +201,7 @@ select{
 .left-qianzhao-task{
     background-color:rgb(116,165,241);
     position: relative;
-    top: 120px;
+    top: 50px;
     left: 40px;
     height: 40px;
     width: 750px;
@@ -210,7 +212,7 @@ select{
     height: 40px;
     position: relative;
     left: 810px;
-    top:80px;
+    top:10px;
 }
 /*以上前兆台网服务器监控管理*/
 .five-square{
@@ -219,7 +221,7 @@ select{
     height: 55px;
     position: relative;
     left: 50px;
-    top: 90px;
+    top: 20px;
 }
 .square{
      width: 130px;
@@ -248,7 +250,7 @@ select{
     height: 50px;
     position: relative;
     left:50px ;
-    top: 100px;
+    top:20px;
     background: url("../img/feed-time.png");
 }
 .time-feedback-calender{
@@ -289,7 +291,7 @@ select{
     height: 40px;
     position: relative;
     left: 50px;
-    top: 110px;
+    top:40px;
     background: url("../img/addanddelete.png");
 }
 .after-add-div{
@@ -304,7 +306,7 @@ select{
     height: 200px;
     position: relative;
     left: 47%;
-    top: -40px;
+    top: -110px;
 }
 .table-td-width{
     width: 200px;
@@ -326,7 +328,7 @@ select{
     background: url("../img/control.png");
     position: relative;
     left: 43%;
-    top: -30px;
+    top: -90px;
 }
 .server-input-div{
    /* border: 1px solid green;*/
@@ -334,11 +336,17 @@ select{
     padding-top: 9px;
     padding-left: 3%;
     width: 50%;
+    font-size: 14px;
+    font-family: "Microsoft JhengHei";
+    font-weight: bold;
 }
 .ip-input-div{
     position: absolute;
     left:50%;
     top: 8px;
+    font-size: 14px;
+    font-family: "Microsoft JhengHei";
+    font-weight: bold;
 }
 .after-search-div{
 position: absolute;
@@ -352,7 +360,7 @@ position: absolute;
     background: url("../img/control.png");
     position: relative;
     left:43%;
-    top: -20px;
+    top: -80px;
 }
 .yellow-div{
     width: 259px;
@@ -378,6 +386,7 @@ position: absolute;
     height: 320px;
     position: relative;
     left: 43%;
+    top:-60px;
 }
 .first-td{
    width:3%;
@@ -421,7 +430,7 @@ position: absolute;
     height: 40px;
     position: relative;
     left: 810px;
-/*    top:50px;*/
+    top:-60px;
 }
 .yiqi-div{
     width: 321px;
@@ -550,7 +559,7 @@ position: absolute;
     width: 873px;
     height: 60px;
     position: relative;
-    top: -20px;
+    top: -90px;
     left: 43.5%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
