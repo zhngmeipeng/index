@@ -414,3 +414,83 @@ position: absolute;
 .last-td{
     border: 1px solid grey;
 }
+/*以上是右边的服务器表格*/
+.right-yiqi-task{
+    width:910px;
+    background-color:rgb(116,165,241);
+    height: 40px;
+    position: relative;
+    left: 810px;
+    top:100px;
+}
+.yiqi-div{
+    width: 321px;
+    height: 22px;
+    position: absolute;
+    left: 30px;
+    padding-top: 10px;
+}
+/*以上是右边的前兆台网设备监控管理*/
+.station-search{
+    width: 895px;
+    height: 51px;
+    background: url("../img/control.png");
+    position: relative;
+    left: 43%;
+    top: 110px;
+}
+.station-input-div{
+    font-size:15px;
+    width: 50%;
+
+}
+.input-size2{
+   width: 120px;
+    height: 23px;
+    line-height: 30px;
+}
+/*以上是右边的仪器搜索*/
+.add-yiqi-div{
+    width: 895px;
+    height: 51px;
+    background: url("../img/control.png");
+    position: relative;
+    left: 43%;
+    top: 120px;
+}
+.after-yiqi-div{
+    width:40%;
+    position: absolute;
+    left: 1%;
+    top: 8px;
+}
+/*以上是右边的仪器搜索*/
+.yiqi-div-table{
+
+    width: 895px;
+    height: 400px;
+    position: relative;
+    left: 43%;
+    top: 140px;
+}
+.machine-first{
+    width: 11%;
+    background: rgb(204,204,204);
+    height: 30px;
+    text-align: center;
+    border: 1px solid grey;
+}
+.machine-second{
+    width: 22%;
+    text-align: center;
+    border: 1px solid grey;
+ }
+.machine-last-tr{
+   height: 30px
+}
+
+.first-machine-td{
+    width:1%;
+    border: 1px solid grey;
+}
+
