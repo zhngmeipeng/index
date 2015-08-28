@@ -493,4 +493,13 @@ position: absolute;
     width:1%;
     border: 1px solid grey;
 }
+/*以上是右边的仪器表格*/
+.feedback-table-div{
+    border: 1px solid green;
+    position: relative;
+    left: 50px;
+    width:730px;
+    height: 1100px;
+    top: -1040px;
+}
 
