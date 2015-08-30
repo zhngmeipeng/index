@@ -95,4 +95,24 @@ window.onload=function(){
             var rss = rtable + rtt + '</table>';
             $("#reportId").html(rss);
         });
+
+    var r2table='<table cellspacing="0" class="feedbackTable2-table"><tr class="aa" style=" background-color: rgb(241,241,241);">' +
+        '<td style="width: 5%">选择</td><td style="width: 10%">台网名称</td><td style="width: 10%">台网代码</td><td style="width: 10%">台站名称</td> <td style="width: 10%">台站名称</td>' +
+        '<td style="width: 5%">位置</td><td style="width: 10%">数采地址</td><td style="width: 5%">网关</td><td style="width: 9%">通讯类型</td><td style="width:7%">联系人</td>' +
+        '<td style="width:7%">联系人电话</td><td style="width: 9%">穿越阀值</td></tr><tr class="table2-last"><td colspan="12"></td></tr>'
+
+    var r2tt = '';
+
+    $.getJSON(
+        "../json/gg.json",
+        function(data) {
+            $.each(data, function (k, v) {
+                r2tt +='<tr class="theme-tr"><td class="border-th"><input type="checkbox"/></td><td class="border-th">'+ v.name+'</td><td class="border-th">'+ v.code+'</td><td class="border-th">'+ v.sname+'</td>' +
+                    '<td class="border-th">'+ v.scode+'</td><td class="border-th">'+ v.position+'</td><td class="border-th">'+ v.addr+'</td><td class="border-th">'+ v.close+'</td>' +
+                    '<td class="border-th">'+ v.tx+'</td><td class="border-th">'+ v.people+'</td><td class="border-th">'+ v.pnumber+'</td><td class="border-th">'+ v.num+'</td></tr><tr class="blank-tr"><td colspan="12"></td></tr>';
+            });
+            var r2ss = r2table + r2tt + '</table>';
+            console.log(r2ss)
+            $("#feedbackTable2").html(r2ss);
+        });
 }
