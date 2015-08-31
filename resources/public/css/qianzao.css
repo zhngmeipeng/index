@@ -146,7 +146,7 @@ a{
 .after-rili-div{
     width:60%;
     position: absolute;
-    left: 62%;
+    left: 71%;
     top: -1px;
 }
 select{
@@ -156,14 +156,12 @@ select{
     font-family: "Microsoft JhengHei";
 }
 .button-style{
+  /*  border: 1px solid green;*/
     text-align: center;
-    font-size: 18px;
-    width: 70px;
-    color: white;
+    width: 73px;
+    height: 30px;
     padding:3px;
-    margin: 2px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+
 }
 
 /*右边事件等*/
@@ -474,7 +472,7 @@ position: absolute;
 .after-yiqi-div{
     width:40%;
     position: absolute;
-    left: 1%;
+    left: 10%;
     top: 8px;
 }
 /*以上是右边的仪器搜索*/
@@ -643,9 +641,9 @@ position: absolute;
 .rili5{
     border:1px solid  grey;
     width: 30px;
-    height:28px;
+    height:29px;
     position: absolute;
-    top:1px;
+    top:0px;
     left:46%;
     line-height: 26px;
     background: rgb(199,199,200);
@@ -653,9 +651,9 @@ position: absolute;
 .rili6{
     border:1px solid  grey;
     width: 30px;
-    height:28px;
+    height:29px;
     position: absolute;
-    top:1px;
+    top:0px;
     left:91%;
     line-height: 26px;
     background: rgb(199,199,200);
@@ -722,4 +720,16 @@ position: absolute;
 }
 .table-twe{
     border: 1px solid grey;
+}
+.span-position{
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.span-position2{
+    width: 80px;
+    position: absolute;
+    top: 18px;
+    left: 32%;
 }
