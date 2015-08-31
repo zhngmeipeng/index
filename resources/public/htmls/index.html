@@ -156,14 +156,14 @@
     </div>
    <!-- 国家台网反馈日报五个小方块-->
     <div class="five-square">
-        <div class="square" style="position: absolute;background-color: rgb(241,241,241);">国家台网反馈日报</div>
-        <div class="square1" style="position: absolute;left: 150px;">台站信息管理</div>
-        <div class="square1" style="position: absolute;left: 300px">台站巡检信息</div>
-        <div class="square1" style="position: absolute;left: 450px">台网仪器标定信息</div>
-        <div class="square1" style="position: absolute;left: 600px">台网仪器维护信息</div>
+        <div class="square" style="position: absolute;" id="square0" name="square">国家台网反馈日报</div>
+        <div class="square1" style="position: absolute;left: 150px;" id="square1" onclick="showTable()" name="square">台站信息管理</div>
+        <div class="square1" style="position: absolute;left: 300px" id="square2" name="square">台站巡检信息</div>
+        <div class="square1" style="position: absolute;left: 450px" id="square3" name="square">台网仪器标定信息</div>
+        <div class="square1" style="position: absolute;left: 600px" id="square4" name="square">台网仪器维护信息</div>
     </div>
     <!--左边的反馈表格-->
-    <div class="table-one">
+    <div class="table-one" id="table0" name="table">
     <!--反馈时间-->
     <div class="time-feedback">
         <div class="time-feedback-calender">反馈时间&nbsp;<input  type="text" id="input3" class="input-size1"/> -&nbsp;<input  type="text" id="input4" class="input-size1"/></div>
@@ -203,10 +203,10 @@
         </div>
     </div>
     <!--左边的反馈表格-->
-    <div class="table-two">
+    <div class="table-two" id="table1" name="table">
         <!--反馈时间-->
         <div class="time-feedback">
-            <div class="table-two">
+            <div class="table-twotwo">
                 台网名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
                 台网代码<input type="text" style="width: 110px;height:20px"/>&nbsp;
                 台站名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
@@ -245,12 +245,12 @@
         </div>
     </div>
     <!--左边的反馈表格-->
-    <div class="table-three">
+    <div class="table-three" id="table2" name="table">
         <!--反馈时间-->
         <div class="time-feedback">
             <div class="table-twotwo">
-                台网名称<input type="text" style="width: 90px;height:20px"/>
-                台网代码<input type="text" style="width: 90px;height:20px"/>
+                台网名称<input type="text" style="width: 70px;height:20px"/>
+                台网代码<input type="text" style="width: 70px;height:20px"/>
                 <div class="right-input2">
                     <div class="rili5" onclick="WdatePicker({el:'input5'})">日历</div>
                     <div class="rili6" onclick="WdatePicker({el:'input6'})">日历</div>
@@ -269,19 +269,55 @@
                 <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
             </div>
         </div>
-        <div class="feedback-table-div" id="feedbackTable3">
-            <table cellspacing="0" border="1">
-                <tr>
-                    <td width="5%">选择</td>
-                    <td width="16%">台站名称</td>
-                    <td width="13%">台站代码</td>
-                    <td width="13%">仪器状态</td>
-                    <td width="13%">供电系统</td>
-                    <td width="13%">通讯系统</td>
-                    <td width="13%">避雷系统</td>
-                    <td width="14%">巡查时间</td>
-                </tr>
-            </table>
+        <div class="feedback-table-div" id="feedbackTable3"></div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
+                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+                <select style="width: 47px">
+                    <option value="10" selected="selected">
+                        10
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+            </div>
+        </div>
+    </div>
+    <!--左边的反馈表格-->
+    <div class="table-four" id="table3" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo">
+                台网名称<input type="text" style="width: 70px;height:20px"/>
+                仪器名称<input type="text" style="width: 70px;height:20px"/>
+                <div class="right-input2">
+                    <div class="rili5" onclick="WdatePicker({el:'input7'})">日历</div>
+                    <div class="rili6" onclick="WdatePicker({el:'input8'})">日历</div>
+                    <div>巡查时间<input id="input7" type="text" class="input-size"/> -<input id="input8" type="text" class="input-size"/>
+
+                    </div>
+                </div>
+            </div>
+            <input type="button" class="button-style" style="background-color: rgb(89,126,207);margin-left:89%;margin-top: 10px" value="搜&nbsp;索"/>
+        </div>
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="新&nbsp;增"/>
+                <input type="button" class="button-style" style="background-color: rgb(150,205,61);" value="编&nbsp;辑"/>
+                <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
+            </div>
+        </div>
+        <div class="feedback-table-div" id="feedbackTable4">
         </div>
         <div class="page-feedback-work">
             <div class="page-right-feedback">
@@ -306,6 +342,92 @@
         </div>
     </div>
 
+    <!--左边的反馈表格-->
+    <div class="table-five" id="table4" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo" style="font-size: 15px;">
+                故障台网名称<input type="text" style="width: 200px;height:30px"/>&nbsp;&nbsp;
+                故障仪器名称<input type="text" style="width: 200px;height:30px"/>
+            </div>
+            <input type="button" class="button-style" style="background-color: rgb(89,126,207);margin-left:89%;margin-top: 10px" value="搜&nbsp;索"/>
+        </div>
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <input type="button" class="button-style" style="background-color: rgb(89,126,207);;" value="新&nbsp;增"/>
+                <input type="button" class="button-style" style="background-color: rgb(150,205,61);" value="编&nbsp;辑"/>
+                <input type="button" class="button-style" style="background-color: rgb(224,114,100);" value="删&nbsp;除"/>
+            </div>
+        </div>
+        <div class="feedback-table-div" id="feedbackTable5">
+            <table cellspacing="0" border="1" width="100%">
+                <tr class="table5-ele">
+                    <td colspan="2" class="table5-first">故障开始时间</td>
+                    <td colspan="3" class="table5-second">2015-07-08 22:17</td>
+                    <td class="table5-three">故障结束时间</td>
+                    <td class="table5-four">2015-07-08 22:17</td>
+                </tr>
+                <tr class="table5-ten">
+                    <td rowspan="5" class="table5-five"><input type="checkbox"></td>
+                    <td class="table5-six">台站名称</td>
+                    <td class="table5-nine">*********</td>
+                    <td class="table5-six">台站代码</td>
+                    <td class="table5-six">*********</td>
+                    <td class="table5-eight">测点代码</td>
+                    <td class="table5-seven">*********</td>
+                </tr>
+                <tr class="table5-ten">
+                    <td>仪器名称</td>
+                    <td>*********</td>
+                    <td >仪器型号</td>
+                    <td >*********</td>
+                    <td >所属学科</td>
+                    <td >*********</td>
+                </tr>
+                <tr class="table5-ten">
+                    <td>仪器名称</td>
+                    <td colspan="4">*********</td>
+                </tr>
+                <tr class="table5-ten">
+                    <td>保修时间</td>
+                    <td>*********</td>
+                    <td >送修时间</td>
+                    <td >*********</td>
+                    <td >维修人员</td>
+                    <td >*********</td>
+               </tr>
+                <tr class="table5-ten">
+                    <td>维修内容</td>
+                    <td colspan="3">*********</td>
+                    <td >维修结果</td>
+                    <td >*********</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
+                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+                <select style="width: 47px">
+                    <option value="10" selected="selected">
+                        10
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+            </div>
+        </div>
+    </div>
     <!--服务器图片-->
     <div class="server-div">
             <table cellspacing="0" >

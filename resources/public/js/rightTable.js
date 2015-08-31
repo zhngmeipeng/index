@@ -2,7 +2,7 @@
  * Created by Administrator on 2015/8/27 0027.
  */
 function showTable(){
-window.onload=function(){
+    $(document).ready(function(){
     var table='<table cellspacing="0" style="width:100% "><tr class="theme-tr2" >' +
         '<td style="width: 8%;" class="show-border">选择</td>' +
         '<td style="width: 40%;" class="show-border">事件内容</td>' +
@@ -64,7 +64,7 @@ window.onload=function(){
             var status=statable+statt+'</table>';
             $("#machineTable").html(status);
         });
-};
+
 
     var mtable=' <table cellspacing="0" width="730px"><tr><td style="width: 10%;" class="machine-first-row">选择</td><td  style="width: 30%;" class="machine-first-row">反馈时间</td>' +
         ' <td  style="width: 60%;" class="machine-first-row">反馈内容</td> </tr><tr><td colspan="3" class="feedback-last-td"></td></tr>';
@@ -112,7 +112,81 @@ window.onload=function(){
                     '<td class="border-th">'+ v.tx+'</td><td class="border-th">'+ v.people+'</td><td class="border-th">'+ v.pnumber+'</td><td class="border-th">'+ v.num+'</td></tr><tr class="blank-tr"><td colspan="12"></td></tr>';
             });
             var r2ss = r2table + r2tt + '</table>';
-            console.log(r2ss)
             $("#feedbackTable2").html(r2ss);
         });
+
+    var r3table='<table cellspacing="0"  class="feedbackTable2-table" ><tr class="aa" style=" background-color: rgb(204,204,204);">' +
+        '<td width="5%">选择</td> <td width="16%">台站名称</td> <td width="13%">台站代码</td> <td width="13%">仪器状态</td> <td width="13%">供电系统</td>' +
+        '<td width="13%">通讯系统</td><td width="13%">避雷系统</td><td width="14%">巡查时间</td></tr><tr class="table2-last"><td colspan="8"></td></tr>'
+
+    var r3tt = '';
+
+    $.getJSON(
+        "../json/ii.json",
+        function(data) {
+            $.each(data, function (k, v) {
+                r3tt +='<tr class="theme-tr"><td class="border-th"><input type="checkbox"/></td><td class="border-th">'+ v.name+'</td><td class="border-th">'+ v.code+'</td><td class="border-th">'+ v.sname+'</td>' +
+                    '<td class="border-th">'+ v.scode+'</td><td class="border-th">'+ v.position+'</td><td class="border-th">'+ v.addr+'</td><td class="border-th">'+ v.close+'</td></tr><tr class="table2-last"><td colspan="8"></td></tr>'
+            });
+            var r3ss = r3table + r3tt + '</table>';
+            $("#feedbackTable3").html(r3ss);
+        });
+
+    var r4table='<table cellspacing="0" class="feedbackTable2-table" style="font-size: 10px"><tr class="aa" style=" background-color: rgb(204,204,204);">' +
+      '<td style="width: 6%;">选择</td><td style="width: 8%;">台站名称</td><td style="width: 8%;">台站代码</td><td style="width: 8%;">测点编码</td>' +
+        '<td style="width: 8%;">仪器名称</td> <td style="width: 8%;">仪器型号</td><td style="width: 8%;">所属学科</td><td style="width: 15%;">标定开始时间</td>' +
+        '<td style="width: 15%;">标定结束时间</td><td style="width: 8%;">标定内容</td><td style="width: 8%;">标定结果</td>' +
+        '</tr><tr class="table2-last"><td colspan="12"></td></tr>'
+
+    var r4tt = '';
+
+    $.getJSON(
+        "../json/jj.json",
+        function(data) {
+            $.each(data, function (k, v) {
+                r4tt +='<tr class="theme-tr"><td class="border-th"><input type="checkbox"/></td><td class="border-th">'+ v.name+'</td><td class="border-th">'+ v.code+'</td><td class="border-th">'+ v.sname+'</td>' +
+                    '<td class="border-th">'+ v.scode+'</td><td class="border-th">'+ v.position+'</td><td class="border-th">'+ v.addr+'</td><td class="border-th">'+ v.close+'</td>' +
+                    '<td class="border-th">'+ v.tx+'</td><td class="border-th">'+ v.people+'</td><td class="border-th">'+ v.pnumber+'</td></tr><tr class="blank-tr"><td colspan="11"></td></tr>';
+            });
+            var r4ss = r4table + r4tt + '</table>';
+            $("#feedbackTable4").html(r4ss);
+        });
+
+
+
+        var r5table='<table cellspacing="0"  width="100%">';
+        $.getJSON(
+            "../json/hh.json",
+            function(data) {
+                $.each(data, function (k, v) {
+                     r5table+=' <tr class="table5-ele"><td colspan="2" class="table5-first">故障开始时间</td>' +
+                        '<td colspan="3" class="table5-second">'+ v.name+'</td><td class="table5-three">故障结束时间</td><td class="table5-four">'+ v.code+'</td>' +
+                        '</tr><tr class="table5-ten"><td rowspan="5" class="table5-five"><input type="checkbox"></td><td class="table5-six">台站名称</td><td class="table5-nine">'+ v.sname+'</td>' +
+                        '<td class="table5-six">台站代码</td><td class="table5-six">'+ v.scode+'</td><td class="table5-eight">测点代码</td><td class="table5-seven">'+ v.position+'</td>' +
+                        '</tr><tr class="table5-ten"><td class="table-twe">仪器名称</td><td class="table-twe">'+ v.addr+'</td><td class="table-twe">仪器型号</td> <td class="table-twe">'+ v.close+'</td><td class="table-twe">所属学科</td><td class="table-twe">'+ v.tx+'</td></tr><tr class="table5-ten">' +
+                        '<td class="table-twe">仪器名称</td><td colspan="4" class="table-twe">'+ v.people+'</td></tr><tr class="table5-ten"><td class="table-twe">保修时间</td><td class="table-twe">'+ v.pnumber+'</td><td class="table-twe">送修时间</td><td class="table-twe">'+ v.num+'</td><td class="table-twe">维修人员</td>' +
+                        '<td class="table-twe">'+ v.ss+'</td> </tr><tr class="table5-ten"><td class="table-twe">维修内容</td><td colspan="3" class="table-twe">'+ v.kk+'</td><td class="table-twe">维修结果</td><td class="table-twe">'+ v.cc+'</td></tr><tr><td colspan="7" class="blank-tr"></td></tr>'
+
+                });
+                var r5ss = r5table +'</table>';
+                $("#feedbackTable5").html(r5ss);
+            });
+
+
+        var ss=document.getElementsByName('square');
+    for(var i=0;i<ss.length;i++){
+        showTable(i);
+    }
+        function showTable(i){
+            ss[i].onclick=function(){
+                $("div[name^='table']").css('display','none');
+                $('#table'+i).css('display','block');
+                $("div[name^='square']").css('background','url("../img/white-square.png")');
+                $('#square'+i).css('background','url("../img/day-report.png")');
+
+            }
+        }
+
+});
+
 }
