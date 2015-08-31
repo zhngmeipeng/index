@@ -96,7 +96,7 @@ function showTable(){
             $("#reportId").html(rss);
         });
 
-    var r2table='<table cellspacing="0" class="feedbackTable2-table"><tr class="aa" style=" background-color: rgb(241,241,241);">' +
+    var r2table='<table cellspacing="0" class="feedbackTable2-table"><tr class="aa" style=" background-color: rgb(204,204,204);">' +
         '<td style="width: 5%">选择</td><td style="width: 10%">台网名称</td><td style="width: 10%">台网代码</td><td style="width: 10%">台站名称</td> <td style="width: 10%">台站名称</td>' +
         '<td style="width: 5%">位置</td><td style="width: 10%">数采地址</td><td style="width: 5%">网关</td><td style="width: 9%">通讯类型</td><td style="width:7%">联系人</td>' +
         '<td style="width:7%">联系人电话</td><td style="width: 9%">穿越阀值</td></tr><tr class="table2-last"><td colspan="12"></td></tr>'
@@ -163,9 +163,9 @@ function showTable(){
                         '<td colspan="3" class="table5-second">'+ v.name+'</td><td class="table5-three">故障结束时间</td><td class="table5-four">'+ v.code+'</td>' +
                         '</tr><tr class="table5-ten"><td rowspan="5" class="table5-five"><input type="checkbox"></td><td class="table5-six">台站名称</td><td class="table5-nine">'+ v.sname+'</td>' +
                         '<td class="table5-six">台站代码</td><td class="table5-six">'+ v.scode+'</td><td class="table5-eight">测点代码</td><td class="table5-seven">'+ v.position+'</td>' +
-                        '</tr><tr class="table5-ten"><td class="table-twe">仪器名称</td><td class="table-twe">'+ v.addr+'</td><td class="table-twe">仪器型号</td> <td class="table-twe">'+ v.close+'</td><td class="table-twe">所属学科</td><td class="table-twe">'+ v.tx+'</td></tr><tr class="table5-ten">' +
-                        '<td class="table-twe">仪器名称</td><td colspan="4" class="table-twe">'+ v.people+'</td></tr><tr class="table5-ten"><td class="table-twe">保修时间</td><td class="table-twe">'+ v.pnumber+'</td><td class="table-twe">送修时间</td><td class="table-twe">'+ v.num+'</td><td class="table-twe">维修人员</td>' +
-                        '<td class="table-twe">'+ v.ss+'</td> </tr><tr class="table5-ten"><td class="table-twe">维修内容</td><td colspan="3" class="table-twe">'+ v.kk+'</td><td class="table-twe">维修结果</td><td class="table-twe">'+ v.cc+'</td></tr><tr><td colspan="7" class="blank-tr"></td></tr>'
+                        '</tr><tr class="table5-ten"><td class="table-twe">仪器名称</td><td class="table-twe1">'+ v.addr+'</td><td class="table-twe">仪器型号</td> <td class="table-twe1">'+ v.close+'</td><td class="table-twe">所属学科</td><td class="table-twe1">'+ v.tx+'</td></tr><tr class="table5-ten">' +
+                        '<td class="table-twe">故障现象</td><td colspan="5" class="table-twe1">'+ v.people+'</td></tr><tr class="table5-ten"><td class="table-twe">保修时间</td><td class="table-twe1">'+ v.pnumber+'</td><td class="table-twe">送修时间</td><td class="table-twe1">'+ v.num+'</td><td class="table-twe">维修人员</td>' +
+                        '<td class="table-twe1">'+ v.ss+'</td></tr><tr class="table5-ten"><td class="table-twe">维修内容</td><td colspan="3" class="table-twe1">'+ v.kk+'</td><td class="table-twe">维修结果</td><td class="table-twe1">'+ v.cc+'</td></tr><tr><td colspan="7" class="blank-tr"></td></tr>'
 
                 });
                 var r5ss = r5table +'</table>';
