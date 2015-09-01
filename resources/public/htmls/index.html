@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <title></title>
-    <script src="../js/jquery-1.8.0.min.js"></script>
-    <link href="../css/qianzao.css" rel="stylesheet" type="text/css" />
-    <script src="../My97DatePicker/WdatePicker.js"></script>
-    <script src="../js/rightTable.js"></script>
+    <script src="js/libs/jquery-1.8.0.min.js"></script>
+    <link href="css/qianzao.css" rel="stylesheet" type="text/css" />
+    <script src="js/libs/My97DatePicker/WdatePicker.js"></script>
+    <script src="apps/_03/rightTable.js"></script>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css" />
     <script src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值">
 
@@ -20,354 +20,111 @@
     showTable();
 </script>
 <body>
-    <div class="theme">
-        <div class="greet-text">admin&nbsp;欢迎您&nbsp;|&nbsp;设置&nbsp;|&nbsp;退出</div>
-        <div class="theme-text-chinese"><img src="../img/qzptthemetext.png" width="500px" height="29px"></div>
-        <div class="theme-text-english"><img src="../img/eglish.png" width="535px" height="15px"></div>
-    </div>
-    <!--值班、排班、任务管理-->
-    <div class="left-work-task">
-        <div class="introduce-table"><img src="../img/zhiban.png" width="267" height="22"></div>
-        <div class="before-fault-number"><img src="../img/onefault.png"><div  class="fault-number" style="position: absolute;top: 5px;left: 25px;">1</div></div>
-    </div>
+<div class="theme">
+    <div class="greet-text">admin&nbsp;欢迎您&nbsp;|&nbsp;设置&nbsp;|&nbsp;退出</div>
+    <div class="theme-text-chinese"><img src="img/_03/qzptthemetext.png" width="500px" height="29px"></div>
+    <div class="theme-text-english"><img src="img/_03/eglish.png" width="535px" height="15px"></div>
+</div>
+<!--值班、排班、任务管理-->
+<div class="left-work-task">
+    <div class="introduce-table"><img src="img/_03/zhiban.png" width="267" height="22"></div>
+    <div class="before-fault-number"><img src="img/_03/onefault.png"><div  class="fault-number" style="position: absolute;top: 5px;left: 25px;">1</div></div>
+</div>
 <!--前兆台网系统日志-->
-    <div class="right-work-task">
-        <div class="introduce-table"><img src="../img/rizhi.png" width="212" height="22"></div>
-        <div class="right-theme-text"><img src="../img/dizheng.png" width="241" height="22"><div class="fault-number" style="position: absolute;left: 44%;top: -5px;">1</div></div>
-    </div>
+<div class="right-work-task">
+    <div class="introduce-table"><img src="img/_03/rizhi.png" width="212" height="22"></div>
+    <div class="right-theme-text"><img src="img/_03/dizheng.png" width="241" height="22"><div class="fault-number" style="position: absolute;left: 44%;top: -5px;">1</div></div>
+</div>
 <!--<左半边的表格-->
-    <div style="border: 1px solid red;position: absolute;left: 40px;width:760px">
+<div style="position: absolute;left: 40px;width:760px">
     <div class="left-table-div" id="reportId">
     </div>
-    </div>
+</div>
 <!--右边的表格头部-->
-    <div style="border:1px solid red;height: 400px;width:870px;position: absolute;top: 200px;left: 810px">
-        <div class="right-input">
-          <div class="rili" onclick="WdatePicker({el:'input1'})">日历</div>
-          <div class="rili2" onclick="WdatePicker({el:'input2'})">日历</div>
-            <div>事件&nbsp;<input type="text" class="input-size"/>&nbsp;时间&nbsp;<input id="input1" type="text" class="input-size"/> -&nbsp;<input id="input2" type="text" class="input-size"/>
-                <select style="width: 90px;height: 30px"><option>所有类型</option></select><div class="after-rili-div">
+<div style="height: 400px;width:900px;position: absolute;top: 210px;left: 810px">
+    <div class="right-input">
+        <div class="rili" onclick="WdatePicker({el:'input1'})">日历</div>
+        <div class="rili2" onclick="WdatePicker({el:'input2'})">日历</div>
+        <div>事件&nbsp;<input type="text" class="input-size"/>&nbsp;时间&nbsp;<input id="input1" type="text" class="input-size"/> -&nbsp;<input id="input2" type="text" class="input-size"/>
+            <select style="width: 90px;height: 30px"><option>所有类型</option></select><div class="after-rili-div">
 
-                    <img type="button" class="button-style" src="../img/searc.png"/>
-                    <img type="button" class="button-style" src="../img/status.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-            </div>
-        </div>
-        <!--右边的表格-->
-        <div class="right-work-table" id="divmessage"></div>
-        <div class="page-right-work">
-            <div class="page-right-switch">
-                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                <select style="width: 47px">
-                    <option value="10" selected="selected">
-                        10
-                    </option>
-                    <option value="20">
-                        20
-                    </option>
-                    <option value="30">
-                        30
-                    </option>
-                </select>
-                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+                <img type="button" class="button-style" src="img/_03/searc.png"/>
+                <img type="button" class="button-style" src="img/_03/status.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
             </div>
         </div>
     </div>
-    <div style="width: 1650px;height: 470px;border: 1px solid red;position: absolute;left:50px;top: 650px">
+    <!--右边的表格-->
+    <div class="right-work-table" id="divmessage"></div>
+    <div class="page-right-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
+</div>
+<div style="width: 1650px;height: 450px;position: absolute;left:50px;top: 650px">
     <!--地图标题-->
-        <div class="map-div">
-            <div class="introduce-table"><img src="../img/dianmap.png" width="156" height="22"></div>
-        </div>
-        <!--地图-->
-        <div id="mapContainer" style="height: 350px; width: 1680px;margin-top:60px"></div>
-
-   <!-- 前兆台网台站信息管理-->
-        <div class="left-qianzhao-task">
-            <div class="introduce-table"><img src="../img/qianzhaoxinxiguli.png" width="267" height="22"></div>
-        </div>
-        <!-- 前兆台网服务器监控管理-->
-        <div class="right-qianzhao-task">
-            <div class="introduce-table"><img src="../img/fuwujiankong.png" width="294" height="22"></div>
-            <div class="right-theme-text"><img src="../img/oneserverdefault.png" width="213" height="22"><div class="fault-number" style="position: absolute;left: 10%;top: -5px;">1</div></div>
-        </div>
+    <div class="map-div">
+        <div class="introduce-table"><img src="img/_03/dianmap.png" width="156" height="22"></div>
     </div>
-   <!-- 国家台网反馈日报五个小方块-->
-    <div style="border:1px solid red;width: 750px;height: 1400px;position: absolute;top:1150px;left: 50px">
-        <div class="five-square">
-            <div class="square" style="position: absolute;" id="square0" name="square">国家台网反馈日报</div>
-            <div class="square1" style="position: absolute;left: 150px;" id="square1" onclick="showTable()" name="square">台站信息管理</div>
-            <div class="square1" style="position: absolute;left: 300px" id="square2" name="square">台站巡检信息</div>
-            <div class="square1" style="position: absolute;left: 450px" id="square3" name="square">台网仪器标定信息</div>
-            <div class="square1" style="position: absolute;left: 600px" id="square4" name="square">台网仪器维护信息</div>
-        </div>
-        <!--左边的反馈表格-->
-        <div class="table-one" id="table0" name="table">
+    <!--地图-->
+    <div id="mapContainer" style="height: 350px; width: 1680px;margin-top:50px"></div>
+
+    <!-- 前兆台网台站信息管理-->
+    <div class="left-qianzhao-task">
+        <div class="introduce-table"><img src="img/_03/qianzhaoxinxiguli.png" width="267" height="22"></div>
+    </div>
+    <!-- 前兆台网服务器监控管理-->
+    <div class="right-qianzhao-task">
+        <div class="introduce-table"><img src="img/_03/fuwujiankong.png" width="294" height="22"></div>
+        <div class="right-theme-text"><img src="img/_03/oneserverdefault.png" width="213" height="22"><div class="fault-number" style="position: absolute;left: 10%;top: -5px;">1</div></div>
+    </div>
+</div>
+<!-- 国家台网反馈日报五个小方块-->
+<div style="width: 750px;height: 1400px;position: absolute;top:1090px;left: 50px">
+    <div class="five-square">
+        <div class="square" style="position: absolute;" id="square0" name="square">国家台网反馈日报</div>
+        <div class="square1" style="position: absolute;left: 150px;" id="square1" onclick="showTable()" name="square">台站信息管理</div>
+        <div class="square1" style="position: absolute;left: 300px" id="square2" name="square">台站巡检信息</div>
+        <div class="square1" style="position: absolute;left: 450px" id="square3" name="square">台网仪器标定信息</div>
+        <div class="square1" style="position: absolute;left: 600px" id="square4" name="square">台网仪器维护信息</div>
+    </div>
+    <!--左边的反馈表格-->
+    <div class="table-one" id="table0" name="table">
         <!--反馈时间-->
         <div class="time-feedback">
             <div class="time-feedback-calender">反馈时间&nbsp;<input  type="text" id="input3" class="input-size1"/> -&nbsp;<input  type="text" id="input4" class="input-size1"/></div>
             <div class="rili3" onclick="WdatePicker({el:'input3'})">日历</div>
             <div class="rili4" onclick="WdatePicker({el:'input4'})">日历</div>
-            <img type="button" class="button-style" src="../img/searc.png" style="margin-left: 83%;margin-top: 8px"/>
+            <img type="button" class="button-style" src="img/_03/searc.png" style="margin-left: 83%;margin-top: 8px"/>
         </div>
         <!--增删改查-->
         <div class="add-delete-div">
             <div class="after-add-div">
-                <img type="button" class="button-style" src="../img/add.png"/>
-                <img type="button" class="button-style" src="../img/edit.png"/>
-                <img class="button-style" src="../img/delete.png" />
+                <img type="button" class="button-style" src="img/_03/add.png"/>
+                <img type="button" class="button-style" src="img/_03/edit.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
             </div>
         </div>
-            <div class="feedback-table-div" id="feedbackTable"></div>
-            <div class="page-feedback-work">
-                <div class="page-right-feedback">
-                    当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                    <select style="width: 47px">
-                        <option value="10" selected="selected">
-                            10
-                        </option>
-                        <option value="20">
-                            20
-                        </option>
-                        <option value="30">
-                            30
-                        </option>
-                    </select>
-                    <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                    <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                    <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
-                </div>
-            </div>
-        </div>
-        <!--左边的反馈表格-->
-        <div class="table-two" id="table1" name="table">
-            <!--反馈时间-->
-            <div class="time-feedback">
-                <div class="table-twotwo">
-                    台网名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
-                    台网代码<input type="text" style="width: 110px;height:20px"/>&nbsp;
-                    台站名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
-                    台站代码<input type="text" style="width: 110px;height:20px"/>&nbsp;
-                </div>
-            </div>
-            <!--增删改查-->
-            <div class="add-delete-div">
-                <div class="after-add-div">
-                    <img type="button" class="button-style" src="../img/add.png"/>
-                    <img type="button" class="button-style" src="../img/edit.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-            </div>
-            <div class="feedback-table-div" id="feedbackTable2"></div>
-            <div class="page-feedback-work">
-                <div class="page-right-feedback">
-                    当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                    <select style="width: 47px">
-                        <option value="10" selected="selected">
-                            10
-                        </option>
-                        <option value="20">
-                            20
-                        </option>
-                        <option value="30">
-                            30
-                        </option>
-                    </select>
-                    <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                    <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                    <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
-                </div>
-            </div>
-        </div>
-        <!--左边的反馈表格-->
-        <div class="table-three" id="table2" name="table">
-            <!--反馈时间-->
-            <div class="time-feedback">
-                <div class="table-twotwo">
-                    台网名称<input type="text" style="width: 70px;height:20px"/>
-                    台网代码<input type="text" style="width: 70px;height:20px"/>
-                    <div class="right-input2">
-                        <div class="rili5" onclick="WdatePicker({el:'input5'})">日历</div>
-                        <div class="rili6" onclick="WdatePicker({el:'input6'})">日历</div>
-                        <div>巡查时间<input id="input5" type="text" class="input-size"/> -<input id="input6" type="text" class="input-size"/>
-
-                        </div>
-                    </div>
-                </div>
-                <img type="button" class="button-style" src="../img/searc.png" style="margin-top: 7px;margin-left: 89%"/>
-            </div>
-            <!--增删改查-->
-            <div class="add-delete-div">
-                <div class="after-add-div">
-                    <img type="button" class="button-style" src="../img/add.png"/>
-                    <img type="button" class="button-style" src="../img/edit.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-            </div>
-            <div class="feedback-table-div" id="feedbackTable3"></div>
-            <div class="page-feedback-work">
-                <div class="page-right-feedback">
-                    当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                    <select style="width: 47px">
-                        <option value="10" selected="selected">
-                            10
-                        </option>
-                        <option value="20">
-                            20
-                        </option>
-                        <option value="30">
-                            30
-                        </option>
-                    </select>
-                    <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                    <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                    <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
-                </div>
-            </div>
-        </div>
-        <!--左边的反馈表格-->
-        <div class="table-four" id="table3" name="table">
-            <!--反馈时间-->
-            <div class="time-feedback">
-                <div class="table-twotwo">
-                    台网名称<input type="text" style="width: 70px;height:20px"/>
-                    仪器名称<input type="text" style="width: 70px;height:20px"/>
-                    <div class="right-input2">
-                        <div class="rili5" onclick="WdatePicker({el:'input7'})">日历</div>
-                        <div class="rili6" onclick="WdatePicker({el:'input8'})">日历</div>
-                        <div>巡查时间<input id="input7" type="text" class="input-size"/> -<input id="input8" type="text" class="input-size"/>
-
-                        </div>
-                    </div>
-                </div>
-                <img type="button" class="button-style" src="../img/searc.png" style="margin-left: 89%;margin-top: 7px"/>
-            </div>
-            <!--增删改查-->
-            <div class="add-delete-div">
-                <div class="after-add-div">
-                    <img type="button" class="button-style" src="../img/add.png"/>
-                    <img type="button" class="button-style" src="../img/edit.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-            </div>
-            <div class="feedback-table-div" id="feedbackTable4">
-            </div>
-            <div class="page-feedback-work">
-                <div class="page-right-feedback">
-                    当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                    <select style="width: 47px">
-                        <option value="10" selected="selected">
-                            10
-                        </option>
-                        <option value="20">
-                            20
-                        </option>
-                        <option value="30">
-                            30
-                        </option>
-                    </select>
-                    <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                    <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                    <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
-                </div>
-            </div>
-        </div>
-        <!--左边的反馈表格-->
-        <div class="table-five" id="table4" name="table">
-            <!--反馈时间-->
-            <div class="time-feedback">
-                <div class="table-twotwo" style="font-size: 15px;">
-                    故障台网名称<input type="text" style="width: 200px;height:30px"/>&nbsp;&nbsp;
-                    故障仪器名称<input type="text" style="width: 200px;height:30px"/>
-                </div>
-                <img type="button" class="button-style" src="../img/searc.png" style="margin-left:88%;margin-top: 10px"/>
-            </div>
-            <!--增删改查-->
-            <div class="add-delete-div">
-                <div class="after-add-div">
-                    <img type="button" class="button-style" src="../img/add.png"/>
-                    <img type="button" class="button-style" src="../img/edit.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-            </div>
-            <div class="feedback-table-div" id="feedbackTable5">
-            </div>
-            <div class="page-feedback-work">
-                <div class="page-right-feedback">
-                    当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
-                    <select style="width: 47px">
-                        <option value="10" selected="selected">
-                            10
-                        </option>
-                        <option value="20">
-                            20
-                        </option>
-                        <option value="30">
-                            30
-                        </option>
-                    </select>
-                    <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                    <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
-                    <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
-                    <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--服务器图片-->
-    <div style="border: 1px solid red;width: 900px;height: 1400px;position: absolute;left: 820px;top: 1150px">
-        <div class="server-div">
-                <table cellspacing="0" >
-                    <tr>
-                        <td class="table-td-width"><img src="../img/right-server.png"></td>
-                        <td class="table-td-width"><img src="../img/right-server.png"></td>
-                        <td class="table-td-width"><img src="../img/right-server.png"></td>
-                        <td class="table-td-width"><img src="../img/fault-server.png"></td>
-                    </tr>
-                    <tr>
-                        <td class="table-td-chinese">服务器&nbsp;A</td>
-                        <td class="table-td-chinese">服务器&nbsp;B</td>
-                        <td class="table-td-chinese">服务器&nbsp;C</td>
-                        <td class="table-td-chinese" style="color: rgb(245,126,113)">服务器&nbsp;D</td>
-                    </tr>
-                </table>
-        </div>
-        <!--右边ip搜索-->
-        <div class="server-search">
-            <div class="server-input-div">服务器名称&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
-            <div class="ip-input-div">IP&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
-            <div class="after-search-div">
-                <img type="button" class="button-style" src="../img/searc.png" style=""/>
-            </div>
-        </div>
-        <!--服务器增删改查-->
-        <div class="add-server-div">
-                <div class="yellow-div">服务器报警参数设置</div>
-            <span class="span-position2">服务器：</span>
-            <div class="after-yellow-div">
-
-                    <img type="button" class="button-style" src="../img/add.png"/>
-                    <img type="button" class="button-style" src="../img/edit.png"/>
-                    <img class="button-style" src="../img/delete.png" />
-                </div>
-        </div>
-        <!--关于服务器表格-->
-        <div class="server-table-div" id="serverTable"></div>
-        <div class="page-server-work">
-            <div class="page-right-switch">
+        <div class="feedback-table-div" id="feedbackTable"></div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
                 当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
                 <select style="width: 47px">
                     <option value="10" selected="selected">
@@ -387,32 +144,29 @@
                 <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
             </div>
         </div>
-    <!--前兆台网仪器设备监控管理-->
-        <div class="right-yiqi-task">
-            <div class="yiqi-div"><img src="../img/yiqicontrol.png" width="294" height="22"></div>
-        </div>
-        <!--台站搜索-->
-        <div class="station-search">
-            <div class="station-input-div" style="position: absolute;left:2%;top: 12px;">台站名称<input type="text" class="input-size2"/></div>
-            <div class="station-input-div" style="position: absolute;left:24%;top:12px;">台站代码<input type="text" class="input-size2"/></div>
-            <div class="station-input-div" style="position: absolute;left:46%;top:12px;">仪器名称<input type="text" class="input-size2"/></div>
-            <div class="station-input-div" style="position: absolute;left:68%;top: 12px;">仪器代码<input type="text" class="input-size2"/></div>
-            <div class="after-search-div">
-                <img type="button" class="button-style" src="../img/searc.png"/>
+    </div>
+    <!--左边的反馈表格-->
+    <div class="table-two" id="table1" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo">
+                台网名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
+                台网代码<input type="text" style="width: 110px;height:20px"/>&nbsp;
+                台站名称<input type="text" style="width: 110px;height:20px"/>&nbsp;
+                台站代码<input type="text" style="width: 110px;height:20px"/>&nbsp;
             </div>
         </div>
-        <!--设备仪器增删改查-->
-        <div class="add-yiqi-div">
-            <span class="span-position">仪器设备：</span><div class="after-yiqi-div">
-                <img type="button" class="button-style" src="../img/add.png"/>
-                <img type="button" class="button-style" src="../img/edit.png"/>
-                <img class="button-style" src="../img/delete.png" />
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <img type="button" class="button-style" src="img/_03/add.png"/>
+                <img type="button" class="button-style" src="img/_03/edit.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
             </div>
         </div>
-        <!--设备仪器表格-->
-        <div class="yiqi-div-table" id="machineTable"></div>
-        <div class="page-yiqi-work">
-            <div class="page-right-switch">
+        <div class="feedback-table-div" id="feedbackTable2"></div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
                 当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
                 <select style="width: 47px">
                     <option value="10" selected="selected">
@@ -425,18 +179,265 @@
                         30
                     </option>
                 </select>
-                <input type="submit" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
-                <input type="submit" value="上一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num-1}')">
-                <input type="submit" value="下一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num+1}')">
-                <input type="submit" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
                 <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
             </div>
         </div>
     </div>
+    <!--左边的反馈表格-->
+    <div class="table-three" id="table2" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo">
+                台网名称<input type="text" style="width: 70px;height:20px"/>
+                台网代码<input type="text" style="width: 70px;height:20px"/>
+                <div class="right-input2">
+                    <div class="rili5" onclick="WdatePicker({el:'input5'})">日历</div>
+                    <div class="rili6" onclick="WdatePicker({el:'input6'})">日历</div>
+                    <div>巡查时间<input id="input5" type="text" class="input-size"/> -<input id="input6" type="text" class="input-size"/>
 
-    <div class="the-last">
-        <div class="the-last-chinese"><img src="../img/11.png" width="754px" height="22px"></div>
+                    </div>
+                </div>
+            </div>
+            <img type="button" class="button-style" src="img/_03/searc.png" style="margin-top: 7px;margin-left: 89%"/>
+        </div>
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <img type="button" class="button-style" src="img/_03/add.png"/>
+                <img type="button" class="button-style" src="img/_03/edit.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
+            </div>
+        </div>
+        <div class="feedback-table-div" id="feedbackTable3"></div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
+                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+                <select style="width: 47px">
+                    <option value="10" selected="selected">
+                        10
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+            </div>
+        </div>
     </div>
+    <!--左边的反馈表格-->
+    <div class="table-four" id="table3" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo">
+                台网名称<input type="text" style="width: 70px;height:20px"/>
+                仪器名称<input type="text" style="width: 70px;height:20px"/>
+                <div class="right-input2">
+                    <div class="rili5" onclick="WdatePicker({el:'input7'})">日历</div>
+                    <div class="rili6" onclick="WdatePicker({el:'input8'})">日历</div>
+                    <div>巡查时间<input id="input7" type="text" class="input-size"/> -<input id="input8" type="text" class="input-size"/>
+
+                    </div>
+                </div>
+            </div>
+            <img type="button" class="button-style" src="img/_03/searc.png" style="margin-left: 89%;margin-top: 7px"/>
+        </div>
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <img type="button" class="button-style" src="img/_03/add.png"/>
+                <img type="button" class="button-style" src="img/_03/edit.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
+            </div>
+        </div>
+        <div class="feedback-table-div" id="feedbackTable4">
+        </div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
+                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+                <select style="width: 47px">
+                    <option value="10" selected="selected">
+                        10
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+            </div>
+        </div>
+    </div>
+    <!--左边的反馈表格-->
+    <div class="table-five" id="table4" name="table">
+        <!--反馈时间-->
+        <div class="time-feedback">
+            <div class="table-twotwo" style="font-size: 15px;">
+                故障台网名称<input type="text" style="width: 200px;height:30px"/>&nbsp;&nbsp;
+                故障仪器名称<input type="text" style="width: 200px;height:30px"/>
+            </div>
+            <img type="button" class="button-style" src="img/_03/searc.png" style="margin-left:88%;margin-top: 10px"/>
+        </div>
+        <!--增删改查-->
+        <div class="add-delete-div">
+            <div class="after-add-div">
+                <img type="button" class="button-style" src="img/_03/add.png"/>
+                <img type="button" class="button-style" src="img/_03/edit.png"/>
+                <img class="button-style" src="img/_03/delete.png" />
+            </div>
+        </div>
+        <div class="feedback-table-div" id="feedbackTable5">
+        </div>
+        <div class="page-feedback-work">
+            <div class="page-right-feedback">
+                当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+                <select style="width: 47px">
+                    <option value="10" selected="selected">
+                        10
+                    </option>
+                    <option value="20">
+                        20
+                    </option>
+                    <option value="30">
+                        30
+                    </option>
+                </select>
+                <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+                <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+                <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+                <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+            </div>
+        </div>
+    </div>
+</div>
+<!--服务器图片-->
+<div style="width: 900px;height: 1350px;position: absolute;left: 820px;top: 1130px">
+    <div class="server-div">
+        <table cellspacing="0" >
+            <tr>
+                <td class="table-td-width"><img src="img/_03/right-server.png"></td>
+                <td class="table-td-width"><img src="img/_03/right-server.png"></td>
+                <td class="table-td-width"><img src="img/_03/right-server.png"></td>
+                <td class="table-td-width"><img src="img/_03/fault-server.png"></td>
+            </tr>
+            <tr>
+                <td class="table-td-chinese">服务器&nbsp;A</td>
+                <td class="table-td-chinese">服务器&nbsp;B</td>
+                <td class="table-td-chinese">服务器&nbsp;C</td>
+                <td class="table-td-chinese" style="color: rgb(245,126,113)">服务器&nbsp;D</td>
+            </tr>
+        </table>
+    </div>
+    <!--右边ip搜索-->
+    <div class="server-search">
+        <div class="server-input-div">服务器名称&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
+        <div class="ip-input-div">IP&nbsp;:&nbsp;<input type="text" style="width: 250px;height: 30px"/></div>
+        <div class="after-search-div">
+            <img type="button" class="button-style" src="img/_03/searc.png" style=""/>
+        </div>
+    </div>
+    <!--服务器增删改查-->
+    <div class="add-server-div">
+        <div class="yellow-div">服务器报警参数设置</div>
+        <span class="span-position2">服务器：</span>
+        <div class="after-yellow-div">
+
+            <img type="button" class="button-style" src="img/_03/add.png"/>
+            <img type="button" class="button-style" src="img/_03/edit.png"/>
+            <img class="button-style" src="img/_03/delete.png" />
+        </div>
+    </div>
+    <!--关于服务器表格-->
+    <div class="server-table-div" id="serverTable"></div>
+    <div class="page-server-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="button" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="button" value="上一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="下一页" style="width: 60px;height: 25px;" class="page-button">
+            <input type="button" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
+    <!--前兆台网仪器设备监控管理-->
+    <div class="right-yiqi-task">
+        <div class="yiqi-div"><img src="img/_03/yiqicontrol.png" width="294" height="22"></div>
+    </div>
+    <!--台站搜索-->
+    <div class="station-search">
+        <div class="station-input-div" style="position: absolute;left:2%;top: 12px;">台站名称<input type="text" class="input-size2"/></div>
+        <div class="station-input-div" style="position: absolute;left:24%;top:12px;">台站代码<input type="text" class="input-size2"/></div>
+        <div class="station-input-div" style="position: absolute;left:46%;top:12px;">仪器名称<input type="text" class="input-size2"/></div>
+        <div class="station-input-div" style="position: absolute;left:68%;top: 12px;">仪器代码<input type="text" class="input-size2"/></div>
+        <div class="after-search-div">
+            <img type="button" class="button-style" src="img/_03/searc.png"/>
+        </div>
+    </div>
+    <!--设备仪器增删改查-->
+    <div class="add-yiqi-div">
+        <span class="span-position">仪器设备：</span><div class="after-yiqi-div">
+        <img type="button" class="button-style" src="img/_03/add.png"/>
+        <img type="button" class="button-style" src="img/_03/edit.png"/>
+        <img class="button-style" src="img/_03/delete.png" />
+    </div>
+    </div>
+    <!--设备仪器表格-->
+    <div class="yiqi-div-table" id="machineTable"></div>
+    <div class="page-yiqi-work">
+        <div class="page-right-switch">
+            当前：1/25页&nbsp;共250条记录&nbsp;&nbsp;显示条数
+            <select style="width: 47px">
+                <option value="10" selected="selected">
+                    10
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="30">
+                    30
+                </option>
+            </select>
+            <input type="submit" value="首&nbsp;页" style="width: 45px;height: 25px;" class="page-button">
+            <input type="submit" value="上一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num-1}')">
+            <input type="submit" value="下一页" style="width: 60px;height: 25px;" class="page-button" onclick="doPage('${num+1}')">
+            <input type="submit" value="尾&nbsp;页" style="width: 45px;height: 25px;" class="page-button">转到
+            <input type="text" style="width: 20px"/><input type="button" value="Go" style=";width: 30px;height: 25px;" class="page-button"/>
+        </div>
+    </div>
+</div>
+<div style="width: 1680px;height: 130px;position: absolute;top: 2520px;left: 50px">
+    <div class="the-last">
+        <div class="the-last-chinese"><img src="img/_03/11.png" width="754px" height="22px"></div>
+    </div>
+</div>
 </body>
 </html>
 <script>
